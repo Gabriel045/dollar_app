@@ -266,7 +266,11 @@
             ? `Ultima sincronizacion: ${formatDate(new Date(latest).toISOString())}`
             : "Datos cargados";
 
-          setStatus(text);
+          const checkedAt = new Intl.DateTimeFormat("es-VE", {
+            timeStyle: "medium",
+          }).format(new Date());
+
+          setStatus(`${text} | Consulta local: ${checkedAt}`);
         } catch (error) {
           setStatus(`No se pudo cargar la API. ${error.message}`, true);
         }
