@@ -180,7 +180,6 @@
       <section class="top">
         <div>
           <h1>Dolar Venezuela</h1>
-          <p class="sub">Fuente: https://ve.dolarapi.com/v1/dolares</p>
         </div>
         <div class="actions">
           <button id="reload" type="button">Actualizar ahora</button>
@@ -275,9 +274,6 @@
 
       reloadNode.addEventListener("click", loadDollarRates);
       loadDollarRates();
-
-      // Refresh silently every 60 seconds so the board stays current.
-      setInterval(loadDollarRates, 60_000);
     </script>
   </body>
 </html>
